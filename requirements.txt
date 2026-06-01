@@ -1,0 +1,24 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Runtime dependencies — FastAPI server, ingestion/analysis engine, CLI scripts
+#
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+#
+# Versions are pinned with a compatible-release floor (~=) so a fresh install is
+# reproducible while still picking up patch fixes. Re-pin exact versions if you
+# need byte-for-byte reproducibility on the Pi.
+# ─────────────────────────────────────────────────────────────────────────────
+ 
+# Web framework + ASGI server
+fastapi~=0.115
+uvicorn[standard]~=0.34
+python-multipart~=0.0.12   # required by FastAPI for multipart Form/File uploads
+ 
+# Data + storage
+polars~=1.17
+duckdb~=1.1
+ 
+# Statistics + clustering
+numpy~=2.1
+scipy~=1.14
+scikit-learn~=1.5
