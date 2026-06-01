@@ -22,3 +22,16 @@ duckdb~=1.1
 numpy~=2.1
 scipy~=1.14
 scikit-learn~=1.5
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Development dependencies — linting, formatting, testing
+#
+#   pip install -r requirements.txt -r requirements-dev.txt
+#
+# Tool configuration lives in pyproject.toml.
+# ─────────────────────────────────────────────────────────────────────────────
+ 
+ruff~=0.8        # linter + formatter
+pytest~=8.3      # test runner
+pytest-cov~=6.0  # coverage reporting
+httpx~=0.28      # async test client for FastAPI endpoints
